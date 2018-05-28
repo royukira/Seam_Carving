@@ -85,6 +85,7 @@ Using the principle of the algorithm. The marked region will be assign very low 
  ![](https://github.com/royukira/Seam_Carving/blob/master/photo/object_removal/up_energy_map_mask0.jpg)
  
 ### Mask
+
 * Protected mask
  * For protecting some important content, sometimes we need to mark them manually for the better resizing effect.
  * The marked image is called protect-mask
@@ -105,6 +106,7 @@ Using the principle of the algorithm. The marked region will be assign very low 
 
 * Objected mask
  * Mark the removal objective
+ * The marked region will be assign very low energy values (negtive value)
  
  * Removal objective
  
