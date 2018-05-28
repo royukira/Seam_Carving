@@ -39,4 +39,106 @@
 `NOTE:`
 * The function processes the vertical direction firstly, then processes the horizontal direction
 * For convenience, the image will be rotated 90 degree before the process of operation on the horizontal direction
-* However, because of the limitation of the enlarge step (enlarge an image by k, we find the first k seams for removal, and duplicate them), we can not enlarge the image to the double time 
+* However, because of the limitation of the enlarge step (enlarge an image by k, we find the first k seams for removal, and duplicate them), we can not enlarge the image to the double time
+
+Display:
+* Original pic
+
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/normal_vs_seam/test8.jpg)
+
+* Seam carving
+
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/normal_vs_seam/output_test8_withoutmask_400_183.jpg)
+
+* Normal retargeting
+
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/normal_vs_seam/ns_test8_400_183.jpg)
+
+* Energy Map
+
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/normal_vs_seam/up_energy_map_test8.jpg)
+
+### Remove the marked object
+Using the principle of the algorithm. The marked region will be assign very low energy values so that can remove the marked object (marked by black)
+
+`Display:`
+* Original pic
+
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/object_removal/test9.jpg)
+
+* Without protected mask
+  * result
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/object_removal/objRemove_test9_test_bad.jpg)
+
+  * Energy map
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/object_removal/up_energy_map0.jpg)
+ 
+* With protected mask
+  * result
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/object_removal/objRemove_test9_mask.jpg)
+ 
+  * Energy map
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/object_removal/up_energy_map_mask0.jpg)
+ 
+### Mask
+* Protected mask
+ * For protecting some important content, sometimes we need to mark them manually for the better resizing effect.
+ * The marked image is called protect-mask
+ * The marked region will be assign very high energy values so that can prevent the content in marked region from mistaken removal
+ 
+ * Protected marking
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/mask_vs_without_mask/test6_pmask.png)
+ 
+ * Without protected mask
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/mask_vs_without_mask/output_test6_test_without_mask.jpg)
+ 
+ * With protected mask
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/mask_vs_without_mask/output_test6_mask_1.jpg)
+
+
+* Objected mask
+ * Mark the removal objective
+ 
+ * Removal objective
+ 
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/object_removal/test9_omask.png)
+ 
+### Face detection
+In this implementation, I use `Haar Cascades classifier` based on the `Viola–Jones` algorithm. Before processing the image, the face detection can recognize human faces and automatically generate protected masks for those faces.
+
+`Display:`
+
+* Face detection 
+
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/face_detect.png)
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/test12.png)
+
+* Protected mask
+
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/Figure_1.png)
+![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/auto_protect_mask.png)
+
+* Result
+
+ * `BAD`
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/resize_test11_nonFace.jpg)
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/resize_test12_bad.jpg)
+
+ * `GOOD`
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/resize_test11_face.jpg)
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/resize_test12_face_detect.jpg)
+
+* Energy map
+
+ * `Without face detection`
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/down_energy_map1.jpg)
+ 
+ * `With face detection`
+ ![](https://github.com/royukira/Seam_Carving/blob/master/photo/face_detection/down_energy_map_mask1.jpg)
