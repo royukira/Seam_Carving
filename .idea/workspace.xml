@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79e3d037-2fa8-4bc5-ab63-17cfbbaa47fa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-    </list>
+    <list default="true" id="79e3d037-2fa8-4bc5-ab63-17cfbbaa47fa" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/Seam_Carving.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="571">
-              <caret line="616" column="36" lean-forward="true" selection-start-line="616" selection-start-column="36" selection-end-line="616" selection-end-column="36" />
+              <caret line="616" column="36" lean-forward="false" selection-start-line="616" selection-start-column="36" selection-end-line="616" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -199,7 +196,7 @@
     <entry file="file://$PROJECT_DIR$/Seam_Carving.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
-          <caret line="616" column="36" lean-forward="true" selection-start-line="616" selection-start-column="36" selection-end-line="616" selection-end-column="36" />
+          <caret line="616" column="36" lean-forward="false" selection-start-line="616" selection-start-column="36" selection-end-line="616" selection-end-column="36" />
           <folding />
         </state>
       </provider>
